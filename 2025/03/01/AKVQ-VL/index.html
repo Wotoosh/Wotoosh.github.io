@@ -7,7 +7,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://wotoosh.github.io/img/0baf6df9a33de4546d0686bb3d7abe9.jpg">
 <meta property="article:published_time" content="2025-02-28T17:34:46.000Z">
-<meta property="article:modified_time" content="2025-02-28T20:11:12.478Z">
+<meta property="article:modified_time" content="2025-02-28T20:15:37.225Z">
 <meta property="article:author" content="Wotoosh">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://wotoosh.github.io/img/0baf6df9a33de4546d0686bb3d7abe9.jpg"><script type="application/ld+json">{
@@ -17,7 +17,7 @@
   "url": "https://wotoosh.github.io/2025/03/01/AKVQ-VL/",
   "image": "https://wotoosh.github.io/img/0baf6df9a33de4546d0686bb3d7abe9.jpg",
   "datePublished": "2025-02-28T17:34:46.000Z",
-  "dateModified": "2025-02-28T20:11:12.478Z",
+  "dateModified": "2025-02-28T20:15:37.225Z",
   "author": [
     {
       "@type": "Person",
@@ -158,7 +158,7 @@
   isHighlightShrink: false,
   isToc: true,
   pageType: 'post'
-}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">由本自性清净故，令诸爱染悉无垢</span></a><a class="nav-page-title" href="/"><span class="site-name">AKVQ-VL</span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">AKVQ-VL</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-02-28T17:34:46.000Z" title="发表于 2025-03-01 01:34:46">2025-03-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-02-28T20:11:12.478Z" title="更新于 2025-03-01 04:11:12">2025-03-01</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="AKVQ-VL-Attention-Aware-KV-Cache-Adaptive-2-Bit-Quantization-for-Vision-Language-Models阅读笔记"><a href="#AKVQ-VL-Attention-Aware-KV-Cache-Adaptive-2-Bit-Quantization-for-Vision-Language-Models阅读笔记" class="headerlink" title="AKVQ-VL: Attention-Aware KV Cache Adaptive 2-Bit Quantization for Vision-Language Models阅读笔记"></a>AKVQ-VL: Attention-Aware KV Cache Adaptive 2-Bit Quantization for Vision-Language Models阅读笔记</h1><h2 id="motivation"><a href="#motivation" class="headerlink" title="motivation"></a>motivation</h2><ul>
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">由本自性清净故，令诸爱染悉无垢</span></a><a class="nav-page-title" href="/"><span class="site-name">AKVQ-VL</span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">AKVQ-VL</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-02-28T17:34:46.000Z" title="发表于 2025-03-01 01:34:46">2025-03-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-02-28T20:15:37.225Z" title="更新于 2025-03-01 04:15:37">2025-03-01</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="AKVQ-VL-Attention-Aware-KV-Cache-Adaptive-2-Bit-Quantization-for-Vision-Language-Models阅读笔记"><a href="#AKVQ-VL-Attention-Aware-KV-Cache-Adaptive-2-Bit-Quantization-for-Vision-Language-Models阅读笔记" class="headerlink" title="AKVQ-VL: Attention-Aware KV Cache Adaptive 2-Bit Quantization for Vision-Language Models阅读笔记"></a>AKVQ-VL: Attention-Aware KV Cache Adaptive 2-Bit Quantization for Vision-Language Models阅读笔记</h1><h2 id="motivation"><a href="#motivation" class="headerlink" title="motivation"></a>motivation</h2><ul>
 <li>认为现有KV Cache量化没有关注到多模态token间的显著性（saliency）区别</li>
 <li>观察到多模态模型在初始层优先关注文本token（文本显著性注意力，TSA），而在后续层则关注少数关键token（关键token显著性注意力，PSA）。</li>
 <li>与LLM都具有’ocal’ attention pattern，即都会更关注临近的token</li>
@@ -172,17 +172,17 @@
 <li><p>对于pivot token（PSA层显著token，recent token）使用fp16保存，对于text token使用4bit量化，其余量化至2bit，使用pertoken dynamic asymmetric quantization with clipping。</p>
 </li>
 </ul>
-<p><img src="/%5Cpics%5CAKVQ-VL%5C%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE2025-03-01030612.png" alt="屏幕截图2025-03-01030612"></p>
+<p><img src="/pics/AKVQ-VL/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE2025-03-01030612.png" alt="屏幕截图2025-03-01030612"></p>
 <h2 id="创新点2：Walsh-Hadamard矩阵抹平outliers"><a href="#创新点2：Walsh-Hadamard矩阵抹平outliers" class="headerlink" title="创新点2：Walsh-Hadamard矩阵抹平outliers"></a>创新点2：Walsh-Hadamard矩阵抹平outliers</h2><ul>
 <li>受Quarot、Spinquant启发，可使用Fast WalshHadamard Transform (FWHT)加速计算，Value的等价变化可通过讲WH矩阵融入权重矩阵离线计算。</li>
-<li>矩阵构造：<img src="/%5Cpics%5CAKVQ-VL%5C%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE2025-03-01033828.png" alt="屏幕截图2025-03-01033828"></li>
+<li>矩阵构造：<img src="/pics/AKVQ-VL/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE2025-03-01033828.png" alt="屏幕截图2025-03-01033828"></li>
 <li>Key等价变换：</li>
 </ul>
-<p><img src="/%5Cpics%5CAKVQ-VL%5C%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE2025-03-01033902.png" alt="屏幕截图2025-03-01033902"></p>
+<p><img src="/pics/AKVQ-VL/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE2025-03-01033902.png" alt="屏幕截图2025-03-01033902"></p>
 <ul>
 <li>Value等价变换：</li>
 </ul>
-<p><img src="/%5Cpics%5CAKVQ-VL%5C%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE2025-03-01033940.png" alt="屏幕截图2025-03-01033940"></p>
+<p><img src="/pics/AKVQ-VL/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE2025-03-01033940.png" alt="屏幕截图2025-03-01033940"></p>
 <h2 id="成就"><a href="#成就" class="headerlink" title="成就"></a>成就</h2><ul>
 <li><p>第一个针对VLM的KV Cache量化工作，2bit几乎无损</p>
 </li>
